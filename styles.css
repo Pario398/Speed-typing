@@ -1,0 +1,120 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a vibrant background color and font for the whole app */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffcc66;
+}
+
+/* Center the app vertically and horizontally on the page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style the heading with a funky font and colorful text */
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #ff3366;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: rainbow-text 4s linear infinite;
+}
+
+@keyframes rainbow-text {
+    0% {
+        color: #ff3366;
+    }
+
+    25% {
+        color: #ff9933;
+    }
+
+    50% {
+        color: #ffff66;
+    }
+
+    75% {
+        color: #66ff66;
+    }
+
+    100% {
+        color: #3366ff;
+    }
+}
+
+/* Style the typing area with a colorful checkerboard background */
+.typingarea {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(45deg, #ff33cc, #33ccff);
+    background-size: 50% 50%;
+    border-radius: 10px;
+    animation: checkerboard-bg 5s linear infinite;
+    width: 80%;
+}
+
+@keyframes checkerboard-bg {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Style the textarea for the typing area with a dashed border */
+#type {
+    font-size: 1.4rem;
+    border: 3px dashed #ff6699;
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Style the difficulty buttons with funky colors and rotation */
+.difficulty {
+    margin-top: 30px;
+    display: flex;
+}
+
+.difficulty button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #66ff99;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+    transform: rotate(-15deg);
+}
+
+.difficulty button:hover {
+    background-color: #ff9999;
+    color: #fff;
+}
+
+/* Style the typing speed display with colorful text */
+#speed {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #ff6699;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
